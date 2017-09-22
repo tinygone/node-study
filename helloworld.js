@@ -1,1 +1,2 @@
-console.log("Hello World");
+var hello = require('./module/hello');
+hello.world();
