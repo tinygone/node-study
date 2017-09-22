@@ -38,3 +38,10 @@ fs.createReadStream('input.txt')
 
 console.log("文件压缩完成。");
 ```
+
+## JavaScript的函数
+有非常多好玩的玩法，需要加强Javascript的基础。待把Node.js基本学玩再来加强。
+
+## 路由
+可以用 querystring 模块来解析 POST 请求体中的参数
+用URL模块分析URL
