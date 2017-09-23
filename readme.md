@@ -63,3 +63,37 @@ setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用�
 
 ## 常用工具
 util是Node的核心模块，提供常用函数的集合，用于弥补核心JavaScript 的功能 过于精简的不足。
+
+## 常用模块
+http://www.runoob.com/nodejs/nodejs-utitlity-module.html
+序号	模块名 & 描述
+1	OS 模块
+提供基本的系统操作函数。
+2	Path 模块
+提供了处理和转换文件路的工具。
+3	Net 模块
+用于底层的网络通信。提供了服务端和客户端的的操作。
+4	DNS 模块
+用于解析域名。
+5	Domain 模块
+简化异步代码的异常处理，可以捕捉处理try catch无法捕捉的。
+
+## Web模块
+
+
+## Express
+### Express 简介
+Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。
+使用 Express 可以快速地搭建一个完整功能的网站。
+Express 框架核心特性：
++ 可以设置中间件来响应 HTTP 请求。
++ 定义了路由表用于执行不同的 HTTP 请求动作。
++ 可以通过向模板传递参数来动态渲染 HTML 页面。
+
+以下几个重要的模块是需要与 express 框架一起安装的：
++ body-parser - node.js 中间件，用于处理 JSON, Raw, Text 和 URL 编码的数据。
++ cookie-parser - 这就是一个解析Cookie的工具。通过req.cookies可以取到传过来的cookie，并把它们转成对象。
++ multer - node.js 中间件，用于处理 enctype="multipart/form-data"（设置表单的MIME编码）的表单数据。
+
+相关命令：
+npm install express --save
