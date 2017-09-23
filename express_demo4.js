@@ -20,15 +20,15 @@ app.use(express.static('public'));
 
 app.get('/index_get.htm*', function (req, res) {
     res.sendFile(__dirname + "/express/" + "index_get.html");
-})
+});
 
 app.get('/index_post.htm*', function (req, res) {
     res.sendFile(__dirname + "/express/" + "index_post.html");
-})
+});
 
 app.get("/uploadFile", function (req, res) {
     res.sendFile(__dirname + "/express/" + "uploadFile.html")
-})
+});
 
 app.get('/process_get', function (req, res) {
 
@@ -39,7 +39,7 @@ app.get('/process_get', function (req, res) {
     };
     console.log(response);
     res.end(JSON.stringify(response));
-})
+});
 
 app.post("/process_post", urlencodedParser, function (req, res) {
     // 输出 JSON 格式
@@ -49,7 +49,7 @@ app.post("/process_post", urlencodedParser, function (req, res) {
     };
     console.log(response);
     res.end(JSON.stringify(response));
-})
+});
 
 app.post('/file_upload', function (req, res) {
 
@@ -70,13 +70,13 @@ app.post('/file_upload', function (req, res) {
             res.end(JSON.stringify(response));
         });
     });
-})
+});
 
 var server = app.listen(8081, function () {
 
-    var host = server.address().address
-    var port = server.address().port
+    var host = server.address().address;
+    var port = server.address().port;
 
     console.log("应用实例，访问地址为 http://%s:%s", host, port)
 
-})
+});
