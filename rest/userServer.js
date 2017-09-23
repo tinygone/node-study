@@ -1,6 +1,7 @@
 /**
  * Created by liqigang on 2017/9/23.
  */
+// study rest api, 还不最完善的形式，不应该都使用get请求
 var express = require("express");
 var app = express();
 var fs = require("fs");
@@ -32,6 +33,22 @@ app.get('/addUser', function (req, res) {
     });
 });
 
+
+var id = 2;
+
+app.get('/deleteUser', function (req, res) {
+    console.log("deleteUser");
+    // First read existing users.
+    fs.readFile(__dirname + "/" + "user.json", 'utf8', function (err, data) {
+        data = JSON.parse(data);
+        console.log("deleteUser" + data);
+        delete data["user" + 2];
+
+        console.log(data);
+        res.end(JSON.stringify(data));
+    });
+});
+// 根据匹配规则 ，:id要放到最下面，否则很可能会匹配到错误的分支
 app.get('/:id', function (req, res) {
     // 首先我们读取已存在的用户
     fs.readFile(__dirname + "/" + "user.json", 'utf8', function (err, data) {
